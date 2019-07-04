@@ -1,5 +1,5 @@
 
-export const state =  {
+export default {
   user:{
     uid:null,
     token:null,

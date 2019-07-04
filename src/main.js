@@ -10,11 +10,16 @@ import App from './App'
 import router from './router'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@fortawesome/fontawesome-free/css/all.css'
-import VueWorker from 'vue-worker'
+import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+
+if ('serviceWorker' in navigator) {
+  const registration = runtime.register();
+}
+//import VueWorker from 'vue-worker'
 
 Vue.config.productionTip = false
 Vue.use(vuex)
-Vue.use(VueWorker)
+//Vue.use(VueWorker)
 
 
 /* eslint-disable no-new */
